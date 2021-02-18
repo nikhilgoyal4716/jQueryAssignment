@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+    <button>Click to add text</button>
+    <p id='reolaceid'></p>
+</body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function() {
+            $("#reolaceid").append("Newline <br>");
+        });
+        $("#click").click(function() {
+            $('#reolaceid').append('Newline <br>');
+        });
+    });
+</script>
+</html>

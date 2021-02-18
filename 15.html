@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <button>Send AJAX Call</button>
+        <br>
+        <div class="result">Sample</div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $.get("demo.txt",function(data) {
+                $(".result").text(data);
+            });
+        })
+    });
+</script>
+
+</html>

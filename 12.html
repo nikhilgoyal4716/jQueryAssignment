@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="parent">
+        <p>Parent Element</p>
+        <ol class="child">
+            <li>Child Element 1</li>
+            <li>Child Element 2</li>
+        </ol>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".child").click(function(e) {
+            e.stopPropagation();
+        });
+        $(".parent").click(function(e) {
+            alert("Parent element was clicked");
+        });
+        
+    });    
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="panel">
+            Line 1
+            Line 2
+        </div>
+        <div class="panel">
+            1<br />
+            2<br />
+            3<br />
+            4<br />
+            5<br />
+            6<br />
+            7<br />
+            8<br />
+            9<br />
+            10<br />
+            11<br />
+            12<br />
+            13<br />
+            14<br />
+            
+        </div>
+        <div class="panel">
+            1
+        </div>
+        <div class="panel">
+            1
+            2
+        </div>
+        <p id="max"></p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        console.log("DOM Ready");
+        var max=-1;
+        $(".panel").each(function() {
+            if ($(this).height()>max)
+                max=$(this).height();
+        });
+        $("#max").html("Max height: "+max+"px");
+    });
+</script>
+
+</html>
